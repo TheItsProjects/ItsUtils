@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ItsUtils"
+version = "0.0.1"
+authors = [
+    { name="ItsNameless", email="itsnameles@outlook.com" }
+]
+description = "A Package containing utils created by ItsNameless"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/TheItsProjects/ItsUtils"
+"Bug Tracker" = "https://github.com/TheItsProjects/ItsUtils/issues"
