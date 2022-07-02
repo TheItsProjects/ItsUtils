@@ -4,7 +4,7 @@ with open("README.md", "r") as freadme:
     readme = freadme.read()
 
 setup(name="ItsUtils",
-      version="0.0.19",
+      version="0.0.20",
       author="ItsNameless",
       description="A Package containing utils created by ItsNameless",
       long_description=readme,
@@ -21,7 +21,11 @@ setup(name="ItsUtils",
           "Homepage": "https://github.com/TheItsProjects/ItsUtils",
           "Issue Tracker": "https://github.com/TheItsProjects/ItsUtils/issues"
       },
-      packages=find_namespace_packages(
-          where=".", include=["its_utils", "its_utils.string_math"]),
+      packages=find_namespace_packages(where=".",
+                                       include=[
+                                           "its_utils",
+                                           "its_utils.string_math",
+                                           "its_utils.debug_prompt"
+                                       ]),
       package_dir={"": "."},
       package_data={"": ["py.typed"]})

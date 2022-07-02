@@ -12,6 +12,12 @@ To install this package, simply use pip:
 pip install ItsUtils
 ```
 
+Or install the development version using:
+
+```
+pip install git+https://github.com/TheItsProjects/ItsUtils
+```
+
 ## Contributing
 
 If you want to give me an idea for a new feature or want to create new features yourself, you can visit the GitHub Repository for this project:
@@ -25,7 +31,7 @@ These are the currently available features:
 ### StringMath
 
 ```py
-from ItsUtils.string_math import StringMath
+from its_utils.string_math import StringMath
 
 print(StringMath.full('1*10^45*(3+5)'))
 ```
@@ -33,3 +39,13 @@ print(StringMath.full('1*10^45*(3+5)'))
 This utility calculates the result of a stringified mathematical expression and returns the result as an integer.
 
 It uses the Shunting-Yard algorithm and follows the correct order of operation rules.
+
+### DebugPrompt
+
+```py
+from its_utils.debug_prompt import Input
+
+inp = Input.input("Type your name: ", 5)
+```
+
+This utility can get an input from the user for a given number of seconds. If no input was given after these seconds, it timeouts and returns None.
