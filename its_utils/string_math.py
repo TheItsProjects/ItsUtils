@@ -27,7 +27,7 @@ class StringMath:
     '''
 
     # define operands
-    operands = {
+    operands: dict[str, int] = {
         '^': 2,
         '*': 1,
         '/': 1,
