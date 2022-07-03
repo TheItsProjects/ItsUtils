@@ -4,7 +4,7 @@ with open("README.md", "r") as freadme:
     readme = freadme.read()
 
 setup(name="ItsUtils",
-      version="0.0.20",
+      version="0.1.0",
       author="ItsNameless",
       description="A Package containing utils created by ItsNameless",
       long_description=readme,
