@@ -4,7 +4,7 @@ with open("README.md", "r") as freadme:
     readme = freadme.read()
 
 setup(name="ItsUtils",
-      version="0.1.0",
+      version="0.2.0",
       author="ItsNameless",
       description="A Package containing utils created by ItsNameless",
       long_description=readme,
@@ -25,7 +25,8 @@ setup(name="ItsUtils",
                                        include=[
                                            "its_utils",
                                            "its_utils.string_math",
-                                           "its_utils.debug_prompt"
+                                           "its_utils.debug_prompt",
+                                           "its_utils.word_math"
                                        ]),
       package_dir={"": "."},
       package_data={"": ["py.typed"]})

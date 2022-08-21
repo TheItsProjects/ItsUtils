@@ -40,6 +40,20 @@ This utility calculates the result of a stringified mathematical expression and 
 
 It uses the Shunting-Yard algorithm and follows the correct order of operation rules.
 
+### WordMath
+
+```py
+from its_utils.word_math import WordMath
+
+print(WordMath.full('siebentausendvierhundertunddreiundachtzig'))
+```
+
+This utility returns the integer expression of a numeral.
+
+Currently, it only works for the german language, but i may be later extended to support other languages too.
+
+It works with numbers up to `999,999,999 (neunhundertneunundneunzig millionen neunhundertneunundneunzigtausendneunhundertundneunundneunzig)`, but may be later extend to even bigger numbers.
+
 ### DebugPrompt
 
 ```py

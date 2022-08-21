@@ -145,11 +145,12 @@ class StringMath:
                         'Parentheses are not balanced. Too many closing parentheses.'
                     )
                 parentheses = False
-                for i2 in range(len(stack) - 1, 0, -1):
+                for i2 in range(len(stack) - 1, -1, -1):
                     if stack[i2] != '(':
                         out.append(stack.pop(i2))
                     else:
                         stack.pop(i2)
+                        break
 
         # if '(' is left in stack, raise error
         if '(' in stack:
