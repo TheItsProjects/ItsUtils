@@ -1,20 +1,20 @@
-from typing import Dict, List, Union
 import unittest
 from its_utils.word_math import WordMath
+from utils import Util
+
 
 class Tests(unittest.TestCase):
+
     def setUp(self) -> None:
-        pass
-    
+        self.util = Util(self, WordMath.full)
+
     def tearDown(self) -> None:
         pass
-    
+
     def test_one_digit_numbers(self):
         # zero (upper- and lowercase)
-        zero = {
-            0: ["null", "Null"]
-        }
-        
+        zero = {0: ["null", "Null"]}
+
         # other numbers
         ones = {
             1: "eins",
@@ -27,10 +27,10 @@ class Tests(unittest.TestCase):
             8: "acht",
             9: "neun"
         }
-        
-        testall(zero, self) # type: ignore
-        testall(ones, self) # type: ignore
-        
+
+        self.util.testall(zero)  # type: ignore
+        self.util.testall(ones)  # type: ignore
+
     def test_two_digit_numbers(self):
         # tenth numbers
         tenth = {
@@ -43,8 +43,9 @@ class Tests(unittest.TestCase):
             16: "sechzehn",
             17: "siebzehn",
             18: "achtzehn",
-            19: "neunzehn"}
-        
+            19: "neunzehn"
+        }
+
         # ten-like numbers
         tens = {
             20: "zwanzig",
@@ -58,9 +59,9 @@ class Tests(unittest.TestCase):
             80: "achtzig",
             90: "neunzig"
         }
-        
-        testall(tenth, self) # type: ignore
-        testall(tens, self)  # type: ignore
+
+        self.util.testall(tenth)  # type: ignore
+        self.util.testall(tens)  # type: ignore
 
     def test_three_digit_numbers(self):
         threes = {
@@ -77,9 +78,9 @@ class Tests(unittest.TestCase):
             800: "achthundert",
             900: "neunhundert"
         }
-        
-        testall(threes, self)
-        
+
+        self.util.testall(threes)
+
     def test_four_digit_numbers(self):
         fours = {
             # 1000: ["eintausend", "tausend"],
@@ -95,43 +96,40 @@ class Tests(unittest.TestCase):
             8000: "achttausend",
             9000: "neuntausend"
         }
-        
-        testall(fours, self)
-        
+
+        self.util.testall(fours)
+
     def test_five_six_seven_nine_digit_numbers(self):
-        fives = {
-            10000: "zehntausend",
-            50000: "fünfzigtausend"
-        }
+        fives = {10000: "zehntausend", 50000: "fünfzigtausend"}
         sixes = {
             100000: ["hunderttausend", "einhunderttausend"],
             500000: "fünfhunderttausend",
             703010: "siebenhundertdreitausendundzehn"
         }
-        
+
         sevens = {
             # 1000000: ["millionen", "eine millionen"],
             # 5000000: "fünf millionen",
-            6041345: "sechs millionen einundvierzigtausenddreihundertundfünfundvierzig"
+            6041345:
+            "sechs millionen einundvierzigtausenddreihundertundfünfundvierzig"
         }
-        
+
         nines = {
-            999999999: "neunhundertneunundneunzig millionen neunhundertneunundneunzigtausendneunhundertundneunundneunzig"
+            999999999:
+            "neunhundertneunundneunzig millionen neunhundertneunundneunzigtausendneunhundertundneunundneunzig"
         }
-        
-        testall(fives, self)  # type: ignore
-        testall(sixes, self)
-        testall(sevens, self)  # type: ignore
-        testall(nines, self)  # type: ignore
-        
-def testall(dictionary: Dict[int, Union[str, List[str]]], self: Tests):
-    for num, word in dictionary.items():
-        with self.subTest("", num=num):
-            if type(word) == list:
-                for w in word:
-                    self.assertEqual(num, WordMath.full(w), f"failed at: {num} | {w}")
-            else:
-                self.assertEqual(num, WordMath.full(word), f"failed at: {num} | {word}")  # type: ignore
+
+        self.util.testall(fives)  # type: ignore
+        self.util.testall(sixes)
+        self.util.testall(sevens)  # type: ignore
+        self.util.testall(nines)  # type: ignore
 
 
-
+# def testall(dictionary: Dict[int, Union[str, List[str]]], self: Tests):
+#     for num, word in dictionary.items():
+#         with self.subTest("", num=num):
+#             if type(word) == list:
+#                 for w in word:
+#                     self.assertEqual(num, WordMath.full(w), f"failed at: {num} | {w}")
+#             else:
+#                 self.assertEqual(num, WordMath.full(word), f"failed at: {num} | {word}")  # type: ignore
