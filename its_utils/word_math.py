@@ -82,6 +82,7 @@ class WordMath:
         :return: A list of substrings that represent the tokens in the numword.
         :rtype: List[str]
         '''
+
         # make all chars lowercase
         numword = numword.lower()
 
@@ -138,6 +139,7 @@ class WordMath:
         :return: The input string converted into a mathmatical expression.
         :rtype: List[str]
         '''
+
         # convert substrings to numbers and mathmatical symbols
         out: List[str] = []
         stack: List[str] = []
@@ -184,6 +186,7 @@ class WordMath:
 
     @classmethod
     def _calculate(cls, inp: List[str]) -> int:
+
         # send to StringMath to calculate the result
         return StringMath.calculate(
             StringMath.shunting_yard(inp))  # type: ignore
@@ -200,4 +203,5 @@ class WordMath:
         :return: The string converted into an integer.
         :rtype: int
         '''
+
         return cls._calculate(cls.converter(cls.preprocess(numword)))
