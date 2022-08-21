@@ -52,7 +52,7 @@ This utility returns the integer expression of a numeral.
 
 Currently, it only works for the german language, but i may be later extended to support other languages too.
 
-It works with numbers up to 999,999,999 (neunhundertneunundneunzig millionen neunhundertneunundneunzigtausendneunhundertundneunundneunzig), but may be later extend to even bigger numbers.
+It works with numbers up to `999,999,999 (neunhundertneunundneunzig millionen neunhundertneunundneunzigtausendneunhundertundneunundneunzig)`, but may be later extend to even bigger numbers.
 
 ### DebugPrompt
 
