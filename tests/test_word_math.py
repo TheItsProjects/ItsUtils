@@ -123,13 +123,3 @@ class Tests(unittest.TestCase):
         self.util.testall(sixes)
         self.util.testall(sevens)  # type: ignore
         self.util.testall(nines)  # type: ignore
-
-
-# def testall(dictionary: Dict[int, Union[str, List[str]]], self: Tests):
-#     for num, word in dictionary.items():
-#         with self.subTest("", num=num):
-#             if type(word) == list:
-#                 for w in word:
-#                     self.assertEqual(num, WordMath.full(w), f"failed at: {num} | {w}")
-#             else:
-#                 self.assertEqual(num, WordMath.full(word), f"failed at: {num} | {word}")  # type: ignore
