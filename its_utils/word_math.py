@@ -18,9 +18,9 @@ class WordMath:
     This utility converts numerals to their integer counterparts and returns their value.
 
     To use it, simply use the command:
-    ˋˋˋ
+    ```
     WordMath.full("siebenhundertdrei")
-    ˋˋˋ
+    ```
     '''
     # simple numbers
     # prefixable numbers and suffixes
