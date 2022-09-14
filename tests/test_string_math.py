@@ -47,11 +47,6 @@ class CalculateTests(unittest.TestCase):
 
         self.util.testall(num)  # type: ignore
 
-    # def test_check_valid_expression(self):
-    #     tests = {True: "70*5", False: "helloworld 70*5"}
-
-    #     self.util.testall(tests)  # type: ignore
-
 
 class CheckTests(unittest.TestCase):
 
