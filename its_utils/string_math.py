@@ -34,6 +34,24 @@ class StringMath:
         '+': 0,
         '-': 0,
     }
+       
+    @classmethod
+    def check_valid_expression(cls, expression: str) -> bool:
+        '''
+        Check whether the expression is valid.
+        
+        Whitespaces are allowed. \nOnly `numbers, +, -, *, /, ^, (, )`
+        
+            :param expression: String to be checked.
+            :type expression: str
+            :return: Whether the string only contains valid characters
+            :rtype: bool
+        '''
+        expression = re.sub(r'\s+', '', expression)
+
+        check = re.fullmatch(r'[\d\+\-\*/\^()]+', expression)
+
+        return check is not None
 
     @classmethod
     def calculate_char(cls, char1: Union[str, int], char2: Union[str, int],
