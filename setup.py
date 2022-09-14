@@ -5,7 +5,7 @@ with open("README.md", "r") as freadme:
 
 setup(
     name="ItsUtils",
-    version="0.2.1",  # "X.X.XrcX" for "Release Candidates"
+    version="0.2.2rc1",  # "X.X.XrcX" for "Release Candidates"
     author="ItsNameless",
     description="A Package containing utils created by ItsNameless",
     long_description=readme,
