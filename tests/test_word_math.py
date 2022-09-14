@@ -123,3 +123,6 @@ class Tests(unittest.TestCase):
         self.util.testall(sixes)
         self.util.testall(sevens)  # type: ignore
         self.util.testall(nines)  # type: ignore
+
+    def test_error(self):
+        self.assertRaises(ValueError, WordMath.full, "")
