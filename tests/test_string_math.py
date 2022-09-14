@@ -1,9 +1,9 @@
 import unittest
 from its_utils.string_math import StringMath
-from utils import Util
+from tests.utils import Util
 
 
-class Tests(unittest.TestCase):
+class CalculateTests(unittest.TestCase):
 
     def setUp(self) -> None:
         self.util = Util(self, StringMath.full)
@@ -46,3 +46,22 @@ class Tests(unittest.TestCase):
         num = {70: "(1+4)*(10+4)", 100: "(10^2)+5000-2500*2"}
 
         self.util.testall(num)  # type: ignore
+
+    # def test_check_valid_expression(self):
+    #     tests = {True: "70*5", False: "helloworld 70*5"}
+
+    #     self.util.testall(tests)  # type: ignore
+
+
+class CheckTests(unittest.TestCase):
+
+    def setUp(self) -> None:
+        self.util = Util(self, StringMath.check_valid_expression)
+
+    def tearDown(self) -> None:
+        pass
+
+    def test_check_valid_expression(self):
+        tests = {True: ["70*5", "10"], False: ["helloworld 70*5", "10x"]}
+
+        self.util.testall(tests)  # type: ignore
