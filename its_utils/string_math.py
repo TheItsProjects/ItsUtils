@@ -9,7 +9,7 @@ created by ItsNameless
 
 
 import re
-from typing import List, Union
+from typing import Dict, List, Union
 
 
 class StringMath:
@@ -27,7 +27,7 @@ class StringMath:
     '''
 
     # define operands
-    operands: dict[str, int] = {
+    operands: Dict[str, int] = {
         '^': 2,
         '*': 1,
         '/': 1,
