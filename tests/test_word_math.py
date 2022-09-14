@@ -1,6 +1,6 @@
 import unittest
 from its_utils.word_math import WordMath
-from utils import Util
+from tests.utils import Util
 
 
 class Tests(unittest.TestCase):
