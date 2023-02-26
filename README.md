@@ -40,6 +40,8 @@ This utility calculates the result of a stringified mathematical expression and 
 
 It uses the Shunting-Yard algorithm and follows the correct order of operation rules.
 
+If you provide an empty string as the input, a `ValueError` will be raised.
+
 ### WordMath
 
 ```py

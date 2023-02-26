@@ -83,6 +83,10 @@ class WordMath:
         :rtype: List[str]
         '''
 
+        # check if string is empty
+        if not numword:
+            raise ValueError("Object can not be preprocessed. It is empty.")
+
         # make all chars lowercase
         numword = numword.lower()
 

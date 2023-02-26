@@ -47,6 +47,9 @@ class CalculateTests(unittest.TestCase):
 
         self.util.testall(num)  # type: ignore
 
+    def test_error(self):
+        self.assertRaises(ValueError, StringMath.full, "")
+
 
 class CheckTests(unittest.TestCase):
 
