@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ItsUtils"
+version = "0.2.2"
+authors = [
+    {name = "ItsNameless"}
+]
+description = "A Package containing utils created by ItsNameless"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent"
+]
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/TheItsProjects/ItsUtils"
+Repository = "https://github.com/TheItsProjects/ItsUtils"
+"Issue Tracker" = "https://github.com/TheItsProjects/ItsUtils/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "its_utils",
+    "its_utils.string_math",
+    "its_utils.debug_prompt",
+    "its_utils.word_math"
+]
