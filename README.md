@@ -42,6 +42,8 @@ It uses the Shunting-Yard algorithm and follows the correct order of operation r
 
 If you provide an empty string as the input, a `ValueError` will be raised.
 
+The function `StringMath.check_valid_expression()` can be used to check whether a string is valid and can be processed. If the string is valid, the function will return `True`.
+
 ### WordMath
 
 ```py
